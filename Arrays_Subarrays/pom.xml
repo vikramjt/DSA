@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <name>arrays-prefix-sum</name>
-    <description>Array Prefix Sum</description>
-    <artifactId>arrays-prefix-sum</artifactId>
+    <name>arrays-subarrays</name>
+    <description>Arrays Subarrays</description>
+    <artifactId>arrays-subarrays</artifactId>
     <groupId>vikram-thakre-dsa</groupId>
     <version>1.0.0-SNAPSHOT</version>
 

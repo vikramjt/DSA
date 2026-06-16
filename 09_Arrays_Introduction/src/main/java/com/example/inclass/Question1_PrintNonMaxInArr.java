@@ -15,17 +15,17 @@ public class Question1_PrintNonMaxInArr {
         printIntOtherThanMax(arr, length);
     }
 
-    public static void printIntOtherThanMax(int[] arr, int length){
+    public static void printIntOtherThanMax(int[] arr, int length) {
 
         int maxInt = Integer.MIN_VALUE;
-        for (int i = 0; i < length; i++){
-            if(maxInt < arr[i]){
+        for (int i = 0; i < length; i++) {
+            if (maxInt < arr[i]) {
                 maxInt = arr[i];
             }
         }
         int count = 0;
-        for(int i = 0; i < length; i++){
-            if(maxInt != arr[i]){
+        for (int i = 0; i < length; i++) {
+            if (maxInt != arr[i]) {
                 count++;
             }
         }

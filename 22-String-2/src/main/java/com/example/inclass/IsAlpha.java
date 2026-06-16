@@ -31,10 +31,10 @@ public class IsAlpha {
 
     public int solve(char[] A) {
 
-        for(int i=0 ; i < A.length; i++){
+        for (int i = 0; i < A.length; i++) {
             //System.out.println(A[i]);
-            if(!((A[i] <= 'z' && A[i] >= 'a')
-                    ||(A[i] <= 'Z' && A[i] >= 'A'))){
+            if (!((A[i] <= 'z' && A[i] >= 'a')
+                    || (A[i] <= 'Z' && A[i] >= 'A'))) {
                 //System.out.println("fail: " + A[i]);
                 return 0;
             }

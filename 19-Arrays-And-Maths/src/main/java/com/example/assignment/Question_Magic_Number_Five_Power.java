@@ -46,19 +46,19 @@ public class Question_Magic_Number_Five_Power {
         int temp = A;
         int degree = 0;
         int result = 0;
-        while(temp > 0){
+        while (temp > 0) {
             degree++;
-            if((temp & 1) == 1){
+            if ((temp & 1) == 1) {
                 result = result + powerOfFive(degree);
             }
-            temp = temp>>1;
+            temp = temp >> 1;
         }
         return result;
     }
 
-    public int powerOfFive(int power){
+    public int powerOfFive(int power) {
         int result = 1;
-        for(int i =0; i < power; i++){
+        for (int i = 0; i < power; i++) {
             result = result * 5;
         }
         return result;

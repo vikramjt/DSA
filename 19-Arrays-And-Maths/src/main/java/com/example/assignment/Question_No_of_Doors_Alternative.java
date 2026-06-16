@@ -18,10 +18,10 @@ public class Question_No_of_Doors_Alternative {
     Feel free to get in touch with us if you have any questions
      */
 
-    static int factorial (int A){
+    static int factorial(int A) {
         int noOfFactorial = 1;
-        for(int i =2 ; i <=A/2; i++){
-            if(A % i == 0){
+        for (int i = 2; i <= A / 2; i++) {
+            if (A % i == 0) {
                 noOfFactorial++;
             }
         }
@@ -31,8 +31,8 @@ public class Question_No_of_Doors_Alternative {
 
     public static void main(String[] args) {
         int count = 1;
-        for(int i = 2; i <= 100; i++){
-            if(factorial(i) %2 != 0){
+        for (int i = 2; i <= 100; i++) {
+            if (factorial(i) % 2 != 0) {
                 count++;
             }
         }

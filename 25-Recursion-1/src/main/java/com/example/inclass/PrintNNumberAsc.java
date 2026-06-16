@@ -5,12 +5,12 @@ public class PrintNNumberAsc {
     /*
     Given a no N print all the nos. from N to 1 in decreasing order
      */
-    void print(int N){
-        if(N == 1){
-            System.out.print(N + " " );
+    void print(int N) {
+        if (N == 1) {
+            System.out.print(N + " ");
         } else {
-            print(N-1);
-            System.out.print(N + " " );
+            print(N - 1);
+            System.out.print(N + " ");
         }
     }
 

@@ -32,8 +32,8 @@ public class Simple_Reverse {
     public String solve(String A) {
         StringBuilder str = new StringBuilder(A);
         int left = 0;
-        int right = A.length()-1;
-        while(left < right){
+        int right = A.length() - 1;
+        while (left < right) {
             swapStrChar(str, left, right);
             left++;
             right--;
@@ -41,7 +41,7 @@ public class Simple_Reverse {
         return str.toString();
     }
 
-    public void swapStrChar(StringBuilder str, int i, int j){
+    public void swapStrChar(StringBuilder str, int i, int j) {
         char tmp = str.charAt(i);
         str.setCharAt(i, str.charAt(j));
         str.setCharAt(j, tmp);

@@ -36,7 +36,7 @@ public class Question_Single_Number {
         // DO NOT MODIFY THE ARGUMENTS WITH "final" PREFIX. IT IS READ ONLY
         public int singleNumber(final int[] A) {
             int result = 0;
-            for(int i = 0; i < A.length; i++){
+            for (int i = 0; i < A.length; i++) {
                 result = result ^ A[i];
             }
             return result;

@@ -45,20 +45,20 @@ public class Question_RangeSumArray {
         int lengthA = A.length;
         long[] pfArr = new long[lengthA];
         pfArr[0] = A[0];
-        for(int i = 1; i < lengthA; i++){
-            pfArr[i] = (long) A[i] + pfArr[i-1];
+        for (int i = 1; i < lengthA; i++) {
+            pfArr[i] = (long) A[i] + pfArr[i - 1];
             //System.out.print(" " + pfArr[i]);
         }
         //System.out.println("");
         int rowLength = B.length;
         //System.out.println(rowLength);
         long[] result = new long[rowLength];
-        for(int i = 0; i < rowLength; i++){
+        for (int i = 0; i < rowLength; i++) {
             //System.out.println(pfArr[(B[i][1])] + " " + pfArr[(B[i][0])]);
-            if(B[i][0] == 1){
-                result[i] = pfArr[(B[i][1])-1];
+            if (B[i][0] == 1) {
+                result[i] = pfArr[(B[i][1]) - 1];
             } else {
-                result[i] = pfArr[(B[i][1])-1] - pfArr[(B[i][0])-2];
+                result[i] = pfArr[(B[i][1]) - 1] - pfArr[(B[i][0]) - 2];
             }
         }
         return result;

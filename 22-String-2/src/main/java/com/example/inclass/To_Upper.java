@@ -31,9 +31,9 @@ public class To_Upper {
     Explanation 1: All the characters in the returned array are in uppercase alphabets.
      */
     public char[] to_upper(char[] A) {
-        for(int i =0 ; i < A.length; i++){
-            if(A[i] <= 'z' && A[i] >= 'a'){
-                A[i] = (char)((int)A[i] - 32);
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] <= 'z' && A[i] >= 'a') {
+                A[i] = (char) ((int) A[i] - 32);
             }
         }
         return A;

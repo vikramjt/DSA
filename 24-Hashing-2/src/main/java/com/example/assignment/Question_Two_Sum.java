@@ -24,10 +24,10 @@ public class Question_Two_Sum {
         Set<Integer> hs = new HashSet<>();
         int[] ans = new int[2];
         int lastIndex = -1;
-        for (int i = 0; i < A.length; i++){
+        for (int i = 0; i < A.length; i++) {
             int a = A[i];
-            int b = B-a;
-            if(hs.contains(b)){
+            int b = B - a;
+            if (hs.contains(b)) {
                 lastIndex = i;
                 break;
             } else {
@@ -35,13 +35,13 @@ public class Question_Two_Sum {
             }
         }
         int firstIdx = -1;
-        if(lastIndex == -1){
+        if (lastIndex == -1) {
             return new int[0];
         } else {
             int b = A[lastIndex];
-            int a = B-b;
-            for(int i =0; i < A.length; i++){
-                if(A[i] == a){
+            int a = B - b;
+            for (int i = 0; i < A.length; i++) {
+                if (A[i] == a) {
                     firstIdx = i;
                     break;
                 }

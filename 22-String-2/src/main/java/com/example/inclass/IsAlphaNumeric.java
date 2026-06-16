@@ -28,11 +28,11 @@ public class IsAlphaNumeric {
      */
 
     public int solve(char[] A) {
-        for(int i=0 ; i < A.length; i++){
+        for (int i = 0; i < A.length; i++) {
             //System.out.println(A[i]);
-            if(!((A[i] <= 'z' && A[i] >= 'a')
-                    ||(A[i] <= 'Z' && A[i] >= 'A')
-                    ||(A[i] <= '9' && A[i] >= '0'))){
+            if (!((A[i] <= 'z' && A[i] >= 'a')
+                    || (A[i] <= 'Z' && A[i] >= 'A')
+                    || (A[i] <= '9' && A[i] >= '0'))) {
                 //System.out.println("fail: " + A[i]);
                 return 0;
             }

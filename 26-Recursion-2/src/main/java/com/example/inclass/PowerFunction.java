@@ -6,11 +6,11 @@ public class PowerFunction {
 
      */
 
-    int powerFunc(int a, int N){
-        if(N==1){
+    int powerFunc(int a, int N) {
+        if (N == 1) {
             return a;
         } else {
-            return a * powerFunc(a, N-1);
+            return a * powerFunc(a, N - 1);
         }
     }
 

@@ -32,23 +32,23 @@ public class Question_Majority_Element_Moor_Voting_Algo {
     public int majorityElement(final int[] A) {
         int majElem = A[0];
         int count = 1;
-        for(int i = 1; i < A.length; i++){
-            if(majElem == A[i]){
+        for (int i = 1; i < A.length; i++) {
+            if (majElem == A[i]) {
                 count++;
-            } else if(count == 0){
+            } else if (count == 0) {
                 majElem = A[i];
             } else {
-                count --;
+                count--;
             }
             //System.out.println("majElem: " + majElem + " :: count : " + count);
         }
         count = 0;
-        for(int i = 0; i < A.length; i++){
-            if(A[i] == majElem){
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] == majElem) {
                 count++;
             }
         }
-        if(count > A.length/2){
+        if (count > A.length / 2) {
             return majElem;
         } else {
             return -1;

@@ -47,11 +47,11 @@ public class Question_Help_Sam {
      */
     public int solve(int A) {
         int samHelp = 0;
-        while (A>0){
-            if((A&1)==1){
+        while (A > 0) {
+            if ((A & 1) == 1) {
                 samHelp++;
             }
-            A = A>>1;
+            A = A >> 1;
         }
         return samHelp;
     }

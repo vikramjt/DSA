@@ -49,17 +49,17 @@ public class Distinct_Number_Window {
         Map<Integer, Integer> hmA = new HashMap<>();
 
         int len = A.length;
-        int[] ans = new int[len-B+1];
-        if(len == 1){
+        int[] ans = new int[len - B + 1];
+        if (len == 1) {
             ans = new int[1];
-            ans[0] =1;
+            ans[0] = 1;
             return ans;
         }
-        for (int i = 0; i< B; i++){
-            if(hmA.containsKey(A[i])){
+        for (int i = 0; i < B; i++) {
+            if (hmA.containsKey(A[i])) {
                 //System.out.println("1 :: " + A[i] + " :: " + hmA.get(A[i]));
                 int val = hmA.get(A[i]);
-                hmA.put(A[i], val+1);
+                hmA.put(A[i], val + 1);
                 //System.out.println("2 :: " + A[i] + " :: " + hmA.get(A[i]));
             } else {
                 //System.out.println("3 :: " + A[i]);
@@ -69,20 +69,20 @@ public class Distinct_Number_Window {
 
         ans[0] = hmA.keySet().size();
 
-        for(int i = 1 ; i <= len-B; i++){
-            int val = hmA.get(A[i-1]);
-            if(val == 1){
-                hmA.remove(A[i-1]);
+        for (int i = 1; i <= len - B; i++) {
+            int val = hmA.get(A[i - 1]);
+            if (val == 1) {
+                hmA.remove(A[i - 1]);
             } else {
-                hmA.put(A[i-1], val-1);
+                hmA.put(A[i - 1], val - 1);
             }
-            if(hmA.containsKey(A[i+B-1])){
+            if (hmA.containsKey(A[i + B - 1])) {
                 //System.out.println("4 :: " + A[i+B-1] + " :: " + hmA.get(A[i+B-1]));
-                int val1 = hmA.get(A[i+B-1]);
-                hmA.put(A[i+B-1], val1+1);
+                int val1 = hmA.get(A[i + B - 1]);
+                hmA.put(A[i + B - 1], val1 + 1);
                 //System.out.println("5 :: " + A[i+B-1] + " :: " + hmA.get(A[i+B-1]));
             } else {
-                hmA.put(A[i+B-1], 1);
+                hmA.put(A[i + B - 1], 1);
                 //System.out.println("6 :: " + A[i+B-1] + " :: " + hmA.get(A[i+B-1]));
             }
             ans[i] = hmA.keySet().size();

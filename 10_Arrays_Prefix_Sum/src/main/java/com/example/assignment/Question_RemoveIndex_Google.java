@@ -54,29 +54,29 @@ public class Question_RemoveIndex_Google {
 
         pfEvenSum[0] = A[0];
         pfOddSum[0] = 0;
-        for(int i =1 ; i<length; i++){
-            if(i%2 == 0){
-                pfEvenSum[i] = A[i] + pfEvenSum[i-1];
-                pfOddSum[i] = pfOddSum[i-1]; // the previous sum needs to be added when the index is even
-            } else{
-                pfOddSum[i] = A[i] + pfOddSum[i-1];
-                pfEvenSum[i] = pfEvenSum[i-1]; // the previous sum needs to be added when the index is odd
+        for (int i = 1; i < length; i++) {
+            if (i % 2 == 0) {
+                pfEvenSum[i] = A[i] + pfEvenSum[i - 1];
+                pfOddSum[i] = pfOddSum[i - 1]; // the previous sum needs to be added when the index is even
+            } else {
+                pfOddSum[i] = A[i] + pfOddSum[i - 1];
+                pfEvenSum[i] = pfEvenSum[i - 1]; // the previous sum needs to be added when the index is odd
             }
         }
 
         int count = 0;
 
-        for(int i =0 ; i < length; i++){
+        for (int i = 0; i < length; i++) {
             int sumOdd = 0;
             int sumEven = 0;
-            if(i == 0){
-                sumOdd = pfEvenSum[length-1];
-                sumEven = pfOddSum[length-1];
+            if (i == 0) {
+                sumOdd = pfEvenSum[length - 1];
+                sumEven = pfOddSum[length - 1];
             } else {
-                sumOdd = pfOddSum[i-1] + (pfEvenSum[length-1] - pfEvenSum[i]);
-                sumEven = pfEvenSum[i-1] + (pfOddSum[length-1] - pfOddSum[i]);
+                sumOdd = pfOddSum[i - 1] + (pfEvenSum[length - 1] - pfEvenSum[i]);
+                sumEven = pfEvenSum[i - 1] + (pfOddSum[length - 1] - pfOddSum[i]);
             }
-            if(sumEven == sumOdd){
+            if (sumEven == sumOdd) {
                 count++;
             }
         }

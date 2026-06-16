@@ -15,12 +15,12 @@ public class Question_CountPair_Matching_Char {
      */
 
     //BruteForce Approach
-    public int solveBf(char[] arr, char first, char second){
+    public int solveBf(char[] arr, char first, char second) {
 
-        int count =0;
-        for (int i = 0; i < arr.length; i++){
-            if(arr[i] == first) {
-                for (int j = i+1; j < arr.length; j++) {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == first) {
+                for (int j = i + 1; j < arr.length; j++) {
                     if (arr[j] == second) {
                         count++;
                     }
@@ -34,13 +34,13 @@ public class Question_CountPair_Matching_Char {
 
     //optimized way to solve it
     //Carry forward from last to front
-    public int solve(char[] arr, char first, char second){
+    public int solve(char[] arr, char first, char second) {
         int count = 0;
         int carryForwardCount = 0;
-        for (int i = arr.length-1; i >=0; i--){
-            if(arr[i] == second){
-                carryForwardCount ++;
-            } else if(arr[i] == first){
+        for (int i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] == second) {
+                carryForwardCount++;
+            } else if (arr[i] == first) {
                 count = count + carryForwardCount;
             }
         }
@@ -50,13 +50,13 @@ public class Question_CountPair_Matching_Char {
 
     //optimized way to solve it
     //Carry forward from front to last
-    public int solve2(char[] arr, char first, char second){
+    public int solve2(char[] arr, char first, char second) {
         int count = 0;
         int carryForwardCount = 0;
-        for (int i = 0; i < arr.length; i++){
-            if(arr[i] == first){
-                carryForwardCount ++;
-            } else if(arr[i] == second){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == first) {
+                carryForwardCount++;
+            } else if (arr[i] == second) {
                 count = count + carryForwardCount;
             }
         }

@@ -32,10 +32,10 @@ public class Question_Matrices_Addition {
      */
 
     public int[][] solve(int[][] A, int[][] B) {
-        int[][] sum_AB=new int[A.length][A[0].length];
-        for(int i=0;i<A.length;i++){
-            for(int j=0;j<A[0].length;j++){
-                sum_AB[i][j]=A[i][j]+B[i][j];
+        int[][] sum_AB = new int[A.length][A[0].length];
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[0].length; j++) {
+                sum_AB[i][j] = A[i][j] + B[i][j];
             }
         }
         return sum_AB;

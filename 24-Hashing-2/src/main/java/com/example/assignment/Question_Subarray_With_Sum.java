@@ -47,52 +47,52 @@ public class Question_Subarray_With_Sum {
         int length = A.length;
         long[] pfSum = new long[length];
         int[] ans = new int[1];
-        pfSum[0] = (long)A[0];
+        pfSum[0] = (long) A[0];
         Map<Long, Integer> pfSumHm = new HashMap<>();
         pfSumHm.put(pfSum[0], 0);
         int startIdx = 0;
         int endIdx = length;
         boolean found = false;
-        if(A[0] == B){
+        if (A[0] == B) {
             ans = new int[1];
             return ans;
         }
-        for(int i = 1 ; i < length; i++){
-            pfSum[i] = pfSum[i-1] + (long)A[i];
+        for (int i = 1; i < length; i++) {
+            pfSum[i] = pfSum[i - 1] + (long) A[i];
             pfSumHm.put(pfSum[i], i);
-            if(pfSum[i] == B){
+            if (pfSum[i] == B) {
                 endIdx = i;
                 found = true;
                 break;
             }
         }
-        if(found){
+        if (found) {
             //System.out.println("found1 , startIdx : " + startIdx + "endIdx : " + endIdx);
-            ans = new int[endIdx+1];
-            for(int i =0 ; i <= endIdx; i++){
+            ans = new int[endIdx + 1];
+            for (int i = 0; i <= endIdx; i++) {
                 ans[i] = A[i];
             }
             return ans;
         } else {
-            for(int i = 0; i < length; i++){
+            for (int i = 0; i < length; i++) {
                 //System.out.println(" i : " + i + " pfSum[i] : " + pfSum[i]);
-                if(pfSumHm.containsKey(B + pfSum[i])){
+                if (pfSumHm.containsKey(B + pfSum[i])) {
 
-                    startIdx = i+1;
-                    endIdx = pfSumHm.get(B+pfSum[i]);
+                    startIdx = i + 1;
+                    endIdx = pfSumHm.get(B + pfSum[i]);
                     found = true;
                     break;
                 }
             }
-            if(found){
+            if (found) {
                 ans = new int[(endIdx + 1) - startIdx];
                 //System.out.println("found2 , startIdx : " + startIdx + "endIdx : " + endIdx);
-                for(int i = 0, j = startIdx; i < ans.length; i++, j++){
+                for (int i = 0, j = startIdx; i < ans.length; i++, j++) {
                     ans[i] = A[j];
                 }
                 return ans;
 
-            } else{
+            } else {
                 ans[0] = -1;
                 return ans;
             }

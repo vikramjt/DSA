@@ -45,10 +45,10 @@ public class Question_Special_Seq_AG {
         int count = 0;
         int cfCount = 0;
         char[] arr = A.toCharArray();
-        for(int i = arr.length-1; i >= 0 ; i--){
-            if(arr[i] == 'G'){
+        for (int i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] == 'G') {
                 cfCount++;
-            } else if(arr[i] == 'A'){
+            } else if (arr[i] == 'A') {
                 count = count + cfCount;
             }
         }

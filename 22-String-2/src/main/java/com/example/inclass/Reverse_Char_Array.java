@@ -14,25 +14,25 @@ public class Reverse_Char_Array {
 
      */
 
-    String reverseCharArraySentenceWork(String sentence){
-        String reverseWhole = reverseStrPart(sentence, 0 , (sentence.length()-1));
+    String reverseCharArraySentenceWork(String sentence) {
+        String reverseWhole = reverseStrPart(sentence, 0, (sentence.length() - 1));
         int left = 0;
         char[] reverseCharArr = reverseWhole.toCharArray();
         String result = reverseWhole;
-        for(int i =0 ; i < reverseCharArr.length; i++){
-            if(reverseCharArr[i] == ' '){
-                result = reverseStrPart(result, left, i-1);
+        for (int i = 0; i < reverseCharArr.length; i++) {
+            if (reverseCharArr[i] == ' ') {
+                result = reverseStrPart(result, left, i - 1);
                 i++;
                 left = i;
             }
         }
-        result = reverseStrPart(result, left, reverseCharArr.length-1);
+        result = reverseStrPart(result, left, reverseCharArr.length - 1);
 
         return result;
     }
 
-    String reverseStrPart(String str, int left, int right){
-        while(left < right){
+    String reverseStrPart(String str, int left, int right) {
+        while (left < right) {
             str = swapStrChar(str, left, right);
             left++;
             right--;
@@ -40,7 +40,7 @@ public class Reverse_Char_Array {
         return str;
     }
 
-    String swapStrChar(String str, int i, int j){
+    String swapStrChar(String str, int i, int j) {
         StringBuilder sb = new StringBuilder(str);
         sb.setCharAt(i, str.charAt(j));
         sb.setCharAt(j, str.charAt(i));

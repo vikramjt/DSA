@@ -51,9 +51,9 @@ public class Question_Bulbs {
         int result = 0;
         int previous = 1;
         int length = A.length;
-        for(int i =0 ; i < length; i++){
-            if(A[i] != previous){
-                result ++;
+        for (int i = 0; i < length; i++) {
+            if (A[i] != previous) {
+                result++;
                 previous = A[i];
             }
         }

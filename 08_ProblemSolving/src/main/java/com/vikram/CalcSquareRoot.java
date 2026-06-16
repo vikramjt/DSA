@@ -11,28 +11,28 @@ public class CalcSquareRoot {
         System.out.println(calcSquareRoot(input));
     }
 
-    public static int calcSquareRoot(int A){
-        int newMiddle = A/2;
+    public static int calcSquareRoot(int A) {
+        int newMiddle = A / 2;
         int right = 0;
         int left = 0;
         int middle = 0;
-        if(A ==1){
+        if (A == 1) {
             return 1;
         }
-        while(true){
+        while (true) {
         /*System.out.print("NewMiddle : " + newMiddle);
         System.out.print(" :: right : " + right);
         System.out.println (" :: left : " + left);*/
 
             middle = newMiddle;
-            if(right-left == 1 || left-right == 1){
+            if (right - left == 1 || left - right == 1) {
                 return -1;
             }
-            long middleSqr = (long)middle * middle;
+            long middleSqr = (long) middle * middle;
             //System.out.println(" middleSqr : " + middleSqr);
-            if(middleSqr == A){
+            if (middleSqr == A) {
                 return middle;
-            } else if (middleSqr > Long.parseLong(A+"")){
+            } else if (middleSqr > Long.parseLong(A + "")) {
                 newMiddle = calcMiddle(left, middle);
                 right = middle;
             } else {
@@ -42,7 +42,7 @@ public class CalcSquareRoot {
         }
     }
 
-    public static int calcMiddle(int small, int big){
-        return small + ((big - small)/2);
+    public static int calcMiddle(int small, int big) {
+        return small + ((big - small) / 2);
     }
 }

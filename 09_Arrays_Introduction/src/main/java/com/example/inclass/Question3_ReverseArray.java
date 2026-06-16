@@ -11,21 +11,21 @@ public class Question3_ReverseArray {
         reverseArr(arr1, 7);
     }
 
-    public static void reverseArr(int[] arr, int length){
-        int j = length-1;
+    public static void reverseArr(int[] arr, int length) {
+        int j = length - 1;
         int i = 0;
-        while(i <= j) {
+        while (i <= j) {
             swap(arr, i, j);
             i++;
             j--;
         }
         System.out.println("");
-        for(i = 0; i< length ; i++) {
+        for (i = 0; i < length; i++) {
             System.out.print(arr[i] + " ");
         }
     }
 
-    private static void swap(int[] arr, int i, int j){
+    private static void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;

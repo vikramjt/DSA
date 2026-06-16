@@ -44,10 +44,10 @@ public class Question_Closest_Min_Max {
         public int solve(int[] A) {
 
             int result = 0;
-            if(A.length == 1){
+            if (A.length == 1) {
                 return 1;
-            } else if(A.length == 2){
-                if(A[0] == A[1]){
+            } else if (A.length == 2) {
+                if (A[0] == A[1]) {
                     return 1;
                 }
                 return 2;
@@ -56,29 +56,29 @@ public class Question_Closest_Min_Max {
             int max = Integer.MIN_VALUE;
             int min = Integer.MAX_VALUE;
 
-            for(int i =0; i < A.length; i++){
-                if(max < A[i]){
+            for (int i = 0; i < A.length; i++) {
+                if (max < A[i]) {
                     max = A[i];
                 }
-                if(min > A[i]){
+                if (min > A[i]) {
                     min = A[i];
                 }
             }
-            if(min == max){
+            if (min == max) {
                 return 1;
             }
             int maxPos = -1;
             int minPos = -1;
             int minDistance = Integer.MAX_VALUE;
-            for(int i = A.length-1; i >= 0 ; i--){
-                if(A[i] == max){
+            for (int i = A.length - 1; i >= 0; i--) {
+                if (A[i] == max) {
                     maxPos = i;
-                } else if(A[i] == min){
+                } else if (A[i] == min) {
                     minPos = i;
                 }
-                if(maxPos != -1 && minPos != -1){
+                if (maxPos != -1 && minPos != -1) {
                     int temp = Math.abs(maxPos - minPos) + 1;
-                    if(minDistance > temp){
+                    if (minDistance > temp) {
                         minDistance = temp;
                     }
                 }

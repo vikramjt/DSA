@@ -42,10 +42,10 @@ public class Question_Matrices_Col_Subtraction {
      [[1, 1]] - [[2, 3]] = [[1 - 2, 1 - 3]] = [[-1, -2]]
      */
     public int[][] solve(int[][] A, int[][] B) {
-        int[][] sub_AB=new int[A.length][A[0].length];
-        for(int i=0;i<A.length;i++){
-            for(int j=0;j<A[0].length;j++){
-                sub_AB[i][j]=A[i][j]-B[i][j];
+        int[][] sub_AB = new int[A.length][A[0].length];
+        for (int i = 0; i < A.length; i++) {
+            for (int j = 0; j < A[0].length; j++) {
+                sub_AB[i][j] = A[i][j] - B[i][j];
             }
         }
         return sub_AB;

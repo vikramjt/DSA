@@ -6,15 +6,13 @@ public class LinkedListDeleteLastNode {
         int data;
         ListNode next;
 
-        public ListNode(int data){
+        public ListNode(int data) {
             this.data = data;
             this.next = null;
         }
     }
 
     public static void main(String[] args) {
-        String a;
-
-        a.
+        // TODO: implement delete-last-node logic
     }
 }

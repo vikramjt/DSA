@@ -31,35 +31,35 @@ public class Question_Length_Longest_Cons_1 {
         int count = Integer.MIN_VALUE;
         int lengthA = arr.length;
         int noOfOnes = 0;
-        for(int i =0; i < lengthA; i++){
-            if(arr[i] == '1'){
+        for (int i = 0; i < lengthA; i++) {
+            if (arr[i] == '1') {
                 noOfOnes++;
             }
         }
-        if(lengthA == noOfOnes){
+        if (lengthA == noOfOnes) {
             return lengthA;
         }
-        for(int i =0; i < lengthA; i++){
-            if(arr[i] == '0'){
+        for (int i = 0; i < lengthA; i++) {
+            if (arr[i] == '0') {
                 int rightSum = 0;
-                for(int j=i-1; j >=0; j--){
-                    if(arr[j] == '1'){
+                for (int j = i - 1; j >= 0; j--) {
+                    if (arr[j] == '1') {
                         rightSum++;
                     } else break;
                 }
                 int leftSum = 0;
-                for(int j=i+1; j < arr.length; j++){
-                    if(arr[j] == '1'){
+                for (int j = i + 1; j < arr.length; j++) {
+                    if (arr[j] == '1') {
                         leftSum++;
                     } else break;
                 }
 
-                if(noOfOnes == (leftSum+ rightSum)){
-                    if(count < leftSum + rightSum ){
+                if (noOfOnes == (leftSum + rightSum)) {
+                    if (count < leftSum + rightSum) {
                         count = leftSum + rightSum;
                     }
                 } else {
-                    if(count < leftSum + rightSum + 1){
+                    if (count < leftSum + rightSum + 1) {
                         count = leftSum + rightSum + 1;
                     }
                 }
@@ -70,7 +70,7 @@ public class Question_Length_Longest_Cons_1 {
     }
 
     public static void main(String[] args) {
-        System.out.println ( " 111011101 : " + solve("111011101"));
-        System.out.println ( " 1110111 : " + solve("1110111"));
+        System.out.println(" 111011101 : " + solve("111011101"));
+        System.out.println(" 1110111 : " + solve("1110111"));
     }
 }

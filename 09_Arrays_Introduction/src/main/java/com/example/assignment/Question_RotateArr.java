@@ -18,33 +18,33 @@ public class Question_RotateArr {
         }
         int forwardArr = sc.nextInt();*/
         //input #######
-        int [] arr = {2,3,4,7,2,5,6,3,6};
+        int[] arr = {2, 3, 4, 7, 2, 5, 6, 3, 6};
         int length = 9;
         int forwardArr = 4;
-        if(forwardArr > length){
+        if (forwardArr > length) {
             forwardArr = forwardArr % length;
         }
-        reversePartArr(arr, length, 0, length-1);
+        reversePartArr(arr, length, 0, length - 1);
         reversePartArr(arr, length, 0, forwardArr - 1);
-        reversePartArr(arr, length, forwardArr, length-1);
+        reversePartArr(arr, length, forwardArr, length - 1);
 
-        for(int i = 0; i< length ; i++) {
+        for (int i = 0; i < length; i++) {
             System.out.print(arr[i] + " ");
         }
 
     }
 
-    public static void reversePartArr(int[] arr, int length, int startIdx, int endIdx){
-        int j =endIdx;
+    public static void reversePartArr(int[] arr, int length, int startIdx, int endIdx) {
+        int j = endIdx;
         int i = startIdx;
-        while(i <= j) {
+        while (i <= j) {
             swap(arr, i, j);
             i++;
             j--;
         }
     }
 
-    private static void swap(int[] arr, int i, int j){
+    private static void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;

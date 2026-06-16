@@ -30,9 +30,9 @@ public class To_Lower {
     Explanation 1: All the characters in the returned array are in lowercase alphabets.
      */
     public char[] to_lower(char[] A) {
-        for(int i =0 ; i < A.length; i++){
-            if(A[i] <= 'Z' && A[i] >= 'A'){
-                A[i] = (char)((int)A[i] + 32);
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] <= 'Z' && A[i] >= 'A') {
+                A[i] = (char) ((int) A[i] + 32);
             }
         }
         return A;

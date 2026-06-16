@@ -43,14 +43,14 @@ public class Question_Matrices_Col_Sum {
 
     public int[] solve(int[][] A) {
         int lengthRow = A.length;
-        if(A.length == 1){
+        if (A.length == 1) {
             return A[0];
         }
         int lengthCol = A[0].length;
         int[] result = new int[lengthCol];
-        for(int i = 0; i < lengthCol; i++){
+        for (int i = 0; i < lengthCol; i++) {
             int sum = 0;
-            for(int j = 0; j < lengthRow; j++){
+            for (int j = 0; j < lengthRow; j++) {
                 sum = sum + A[j][i];
             }
             result[i] = sum;

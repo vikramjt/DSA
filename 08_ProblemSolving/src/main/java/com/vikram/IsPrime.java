@@ -13,16 +13,16 @@ public class IsPrime {
 
         int input = sc.nextInt();
         int count = 0;
-        for (int i = 1 ; i* i < input ; i++){
-            if(input % i == 0){
-                if(input == i){
+        for (int i = 1; i * i < input; i++) {
+            if (input % i == 0) {
+                if (input == i) {
                     count++;
                 } else {
-                    count = count +2;
+                    count = count + 2;
                 }
             }
         }
-        if(count == 2){
+        if (count == 2) {
             System.out.print("YES");
         } else {
             System.out.print("NO");

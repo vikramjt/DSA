@@ -41,29 +41,29 @@ public class Reverse_the_String {
     public String solve(String A) {
         A = A.trim();
         StringBuilder result = new StringBuilder(A);
-        reverseStrPart(result, 0 , (A.length()-1));
+        reverseStrPart(result, 0, (A.length() - 1));
         int left = 0;
         char[] reverseCharArr = result.toString().toCharArray();
-        for(int i =0 ; i < reverseCharArr.length; i++){
-            if(reverseCharArr[i] == ' '){
-                reverseStrPart(result, left, i-1);
+        for (int i = 0; i < reverseCharArr.length; i++) {
+            if (reverseCharArr[i] == ' ') {
+                reverseStrPart(result, left, i - 1);
                 i++;
                 left = i;
             }
         }
-        reverseStrPart(result, left, reverseCharArr.length-1);
+        reverseStrPart(result, left, reverseCharArr.length - 1);
         return result.toString();
     }
 
-    void reverseStrPart(StringBuilder str, int left, int right){
-        while(left < right){
+    void reverseStrPart(StringBuilder str, int left, int right) {
+        while (left < right) {
             swapStrChar(str, left, right);
             left++;
             right--;
         }
     }
 
-    public void swapStrChar(StringBuilder str, int i, int j){
+    public void swapStrChar(StringBuilder str, int i, int j) {
         char tmp = str.charAt(i);
         str.setCharAt(i, str.charAt(j));
         str.setCharAt(j, tmp);
